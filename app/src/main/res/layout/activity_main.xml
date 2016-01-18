@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/lin"
+    android:orientation="vertical"
+    android:background="#D3D3D3">
+
+    <include
+        layout="@layout/tool_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rel">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <RelativeLayout
+            android:layout_below="@+id/imageButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:visibility="invisible"
+            android:id="@+id/c_list"
+            android:background="@drawable/shape">
+
+
+            <fragment
+                android:name="com.example.avadhyadav.extra3.Frag"
+                android:id="@+id/frag"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+
+        <ImageButton
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:id="@+id/imageButton"
+            android:background="@drawable/oval"
+            android:elevation="10dp"
+            android:onClick="ButtonClicked"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"/>
+
+        <ImageButton
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:id="@+id/imageButton2"
+            android:visibility="invisible"
+            android:background="@drawable/oval2"
+            android:elevation="10dp"
+            android:onClick="ButtonClicked2"
+            android:src="@mipmap/ic_launcher"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>
